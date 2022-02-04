@@ -32,3 +32,6 @@ const planets = [
     numberOfMoons: 13
   }
 ];
+
+
+planets.forEach(el => console.log(el.name));
