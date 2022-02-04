@@ -7,3 +7,6 @@ const multiValueArray = [
 ];
 
 
+console.log(multiValueArray[3][2]);
+console.log(multiValueArray[1].length);
+console.log(multiValueArray[4][2]);
