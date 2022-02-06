@@ -1,16 +1,12 @@
-// function getLastNumbers(nr, arr) {
-//     let lastNrArr = [];
-    
-//     for (let i = arr.length - 1; i >= 0; i--) {
-//         if (i <= nr) {
-//             lastNrArr.push(arr[i]);
-//         }
-//     }
+function getLastNumbers(nr, arr) {
+    if (isNaN(nr) || nr == undefined) {
+        return [];
+    } else {
+        return arr.slice(nr * -1);
+    }
+}
 
-//     return lastNrArr;
-// }
+let number = 4;
+let array = [1, 2, 3, 4, 5, 6, 7];
 
-// let number = 2;
-// let array = [1, 2, 3, 4, 5, 6, 7];
-
-// console.log(getLastNumbers(number, array));
+console.log(getLastNumbers(number, array));
