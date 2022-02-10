@@ -36,32 +36,28 @@ console.log(getElementText(pink_class));
 
 //--------------------------------------
 
-let images = document.querySelectorAll(".images[alt]");
+let images = document.querySelectorAll(".images");
+let altAtr = [...images];
 
 let getElementAlt = (element) => {
     let arr3 = [];
-    arr3.push(element.forEach((el) => el.getAttribute("alt")));
+
+    element.forEach((el) => arr3.push(el.getAttribute("alt")));
 
     return arr3;
 };
 
-console.log(getElementAlt([...images]));
-//its not working
-
+console.log(getElementAlt(altAtr));
 //--------------------------------------
 
 let linkClass = document.querySelectorAll(".my-link");
 
-console.log(linkClass);
+let link = [...linkClass];
 
 getElementHref = (element) => {
     let arr4 = [];
-
-    arr4.push(element.forEach(el => el.))
-
+    element.forEach((el) => arr4.push(el.getAttribute("href")));
     return arr4;
 };
 
-console.log(getElementHref([...linkClass]));
-
-//also not woking
+console.log(getElementHref(link));
