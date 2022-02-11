@@ -10,3 +10,4 @@ btn1.addEventListener('click', function() {
     spanCount[0].innerText = counter;
     counter++;
 });
+

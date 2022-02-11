@@ -5,3 +5,4 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.add("menu");
     paragraf.innerHTML = "A to jest paragraf w zadaniu 2";
   });
+
