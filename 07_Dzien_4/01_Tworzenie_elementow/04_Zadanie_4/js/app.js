@@ -11,7 +11,7 @@ function adding() {
     let nrTd = document.createElement('td');
     let itemTd = document.createElement('td');
     let quantityTd = document.createElement('td');
-    
+
     tBody.appendChild(newTr);
 
     newTr.appendChild(nrTd);
