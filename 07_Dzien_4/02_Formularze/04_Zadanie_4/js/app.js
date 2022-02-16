@@ -19,18 +19,20 @@ function addToTable(e) {
         tdTeamNd.innerText = teamSecontVal.value;
         trEl.append(tdTeamSt);
         trEl.append(tdTeamNd);
-    } else if (pointsFirstVal.value && pointsSecondVal.value > 0) {
-        let tdTeamPoints = document.createElement("td");
-        tdTeamPoints.innerText = pointsFirstVal.value ;
-        // tdTeamPoints.innerText = pointsSecondVal.value; 
-        tdTeamPoints.append(
-            `${tdTeamPoints} - ${pointsSecondVal.value}`
-        );
-        // trEl.append(tdTeamPoints);
-        console.log(tdTeamPoints)
     } else {
-        alert("Drużyny muszą być różne oraz bramki nie mogą być ujemne!");
+        alert("Drużyny muszą być różne!");
     }
 
-    tableBody.append(trEl);
+    if (pointsFirstVal.value > 0 && pointsSecondVal.value > 0) {
+        let tdTeamPoints = document.createElement("td");
+        tdTeamPoints.append(
+            `${pointsFirstVal.value} - ${pointsSecondVal.value}`
+        );
+        trEl.append(tdTeamPoints);
+
+        tableBody.append(trEl);
+    } else {
+        alert("Bramki nie mogą być ujemne!");
+    }
+    // tableBody.append(trEl);
 }
