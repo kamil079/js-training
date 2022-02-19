@@ -1,4 +1,5 @@
 let inputCardNr = document.querySelector("#cardNumber");
+let cardType = document.querySelector("#type");
 
 let allCards = document.querySelectorAll("i");
 let visaPic = document.querySelector("#visa-icon");
@@ -11,11 +12,17 @@ inputCardNr.addEventListener("keyup", verifyVisa);
 inputCardNr.addEventListener("keyup", verifyAmPic);
 inputCardNr.addEventListener("keyup", verifymasterPic);
 
-function verifyVisa() {
-    if (inputCardNr.value[0] == 4) {
-        visaPic.style.visibility = "visible"; //why this is not workin..
-        console.log(visaPic);
+function verifyVisa(e) {
+    cardType.innerText = '';
+    switch (e.target.value[0]) {
+        case "4":
+            if (e.target.value.length >= 13 && e.target.value.length <= 16) {
+            }
     }
+    visaPic.style.visibility = "visible"; //why this is not workin..
+    cardType.innerText = 'visa'
+    
+    // console.log(e.target.value[0]);
 }
 
 function verifyAmPic() {
